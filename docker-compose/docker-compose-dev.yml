@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  dev-db:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: tt
+      POSTGRES_USER: tt
+      POSTGRES_PASSWORD: tt
+    ports:
+      - 5433:5432
+
+volumes:
+  db-data:
